@@ -9,6 +9,7 @@ import search from './components/tabbar/search.vue'
 //3,创建路由对象
 var router=new VueRouter({
     routes:[//路由匹配规则
+        {path:'/',redirect:'/home'},//重定向，如果是根url，就进入到首页
         {path:'/home',component:home},
         {path:'/member',component:member},
         {path:'/shopcar',component:shopcar},

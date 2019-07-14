@@ -1,7 +1,3 @@
-a{
-    text-decoration: none;
-}
-.router-link-active{
-    background:lightblue;
-
+body{
+    background:#fff;
 }

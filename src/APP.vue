@@ -3,8 +3,10 @@
         <!--顶部Header区域-->
         <mt-header fixed title="草帽商城">
         </mt-header>
-        <h1>这是一个APP组件</h1>
         <!--底部Tabbar区域-->
+        <!--路由显示区域-->
+        <router-view></router-view>
+
         <!--下面的按钮要改成router-link-->
         <nav class="mui-bar mui-bar-tab">
             <router-link class="mui-tab-item" href="#tabbar" to="/home">
