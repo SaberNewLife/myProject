@@ -1,8 +1,10 @@
 <template>
     <div class="app-container">
+        <!--顶部Header区域-->
         <mt-header fixed title="草帽商城">
         </mt-header>
         <h1>这是一个APP组件</h1>
+        <!--底部Tabbar区域-->
         <nav class="mui-bar mui-bar-tab">
             <a class="mui-tab-item mui-active" href="#tabbar">
                 <span class="mui-icon mui-icon-home"></span>
