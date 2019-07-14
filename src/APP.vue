@@ -1,6 +1,6 @@
 <template>
     <div class="app-container">
-        <mt-header fixed title="草帽商城2136">
+        <mt-header fixed title="草帽商城">
         </mt-header>
         <h1>这是一个APP组件</h1>
         <nav class="mui-bar mui-bar-tab">
