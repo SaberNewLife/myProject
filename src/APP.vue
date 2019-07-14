@@ -5,7 +5,10 @@
         </mt-header>
         <!--底部Tabbar区域-->
         <!--路由显示区域-->
-        <router-view></router-view>
+        <transition>
+            <router-view></router-view>
+        </transition>
+
 
         <!--下面的按钮要改成router-link-->
         <nav class="mui-bar mui-bar-tab">
@@ -38,5 +41,22 @@
 <style scoped>
   .app-container{
       padding-top:40px;
+      overflow: hidden;
   }
+    .v-enter
+    {
+        opacity: 0;
+        transform: translateX(100%);
+    }
+    /*//向右移动消失*/
+  .v-leave-to{
+      opacity: 0;
+      transform: translateX(-100%);
+      /*加上position解决页面位移的问题*/
+      position: absolute;
+  }
+    .v-enter-active,
+    .v-leave-active{
+        transition:all 0.4s ease-in-out;
+    }
 </style>
