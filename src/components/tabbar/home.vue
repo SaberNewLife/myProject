@@ -1,22 +1,18 @@
 <template>
     <div>
         <!--轮播图区域  默认没有高度，需要设置高度-->
-        <mt-swipe :auto="4000">
-            <mt-swipe-item v-for="item in lunbotuList" :key="item.id">
-                <img :src="item.img" alt="">
-            </mt-swipe-item>
-        </mt-swipe>
+         <lunbo :lunbotuList="lunbotuList" :isFull="true"></lunbo>
          <!--中间六宫格区域-->
         <ul class="mui-table-view mui-grid-view mui-grid-9">
             <li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3"><router-link to="/home/news">
                 <img src="../../images/menu1.png" alt="">
                 <div class="mui-media-body">新闻资讯</div></router-link></li>
-            <li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3"><a href="#">
+            <li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3"><router-link to="/home/photolist">
                 <img src="../../images/menu2.png" alt="">
-                <div class="mui-media-body">图片分享</div></a></li>
-            <li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3"><a href="#">
+                <div class="mui-media-body">图片分享</div></router-link></li>
+            <li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3"><router-link to="/home/goodslist">
                 <img src="../../images/menu3.png" alt="">
-                <div class="mui-media-body">商品购买</div></a></li>
+                <div class="mui-media-body">商品购买</div></router-link></li>
             <li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3"><a href="#">
                 <img src="../../images/menu4.png" alt="">
                 <div class="mui-media-body">留言反馈</div></a></li>
@@ -32,12 +28,18 @@
 
 <script>
     import {Toast} from 'mint-ui'
+    //导入轮播图组件
+    import swiper from '../subcomponents/swiper.vue'
     export default {
         name: "home",
         data(){//保存从服务器获取的数据
           return {
               lunbotuList:[]
+
           }//存储从服务器获取到的轮播图数据
+        },
+        components:{
+            lunbo:swiper
         },
         created(){
         //    一开始就调用获取数据
@@ -67,22 +69,7 @@
 
 <style scoped>
 
-  .mint-swipe{
-      height:200px;
-  }
-  .mint-swipe .mint-swipe-item:nth-child(1){
-      background: #8a6de9;
-  }
-  .mint-swipe .mint-swipe-item:nth-child(2){
-      background: #72c2e9;
-  }
-  .mint-swipe .mint-swipe-item:nth-child(3){
-      background: #e9972d;
-  }
-  .mint-swipe-item img{
-        width:100%;
-        height:100%;
-    }
+
   .mui-grid-view.mui-grid-9{
       background:#fff;
   }

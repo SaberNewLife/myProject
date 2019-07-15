@@ -1,5 +1,5 @@
 {
   "presets": ["@babel/preset-env"],
   "plugins": ["@babel/plugin-transform-runtime", "@babel/plugin-proposal-class-properties"
-  ,["component", {"libraryName":"mint-ui", "style":true}]]
+  ,["component", {"libraryName":"mint-ui", "style":true}],["@babel/plugin-transform-modules-commonjs", { "strictMode": false }]]
 }

@@ -8,6 +8,10 @@ import shopcar from './components/tabbar/shopcar.vue'
 import search from './components/tabbar/search.vue'
 import NewList from './components/news/NewsList.vue'
 import NewsInfo from './components/news/NewsInfo.vue'
+import photoList from './components/photos/photoList.vue'
+import photoInfo from './components/photos/photoInfo.vue'
+import  goodslist from './components/goods/goodslist.vue'
+import goodsInfo from './components/goods/goodsInfo.vue'
 //3,创建路由对象
 var router=new VueRouter({
     routes:[//路由匹配规则
@@ -17,7 +21,11 @@ var router=new VueRouter({
         {path:'/shopcar',component:shopcar},
         {path:'/search',component:search},
         {path:'/home/news',component:NewList},
-        {path:'/home/newsinfo/:id',component:NewsInfo}
+        {path:'/home/newsinfo/:id',component:NewsInfo},
+        {path:'/home/photolist',component:photoList},
+        {path:'/home/photoinfo/:id',component:photoInfo},
+        {path:'/home/goodslist',component:goodslist},
+        {path:'/home/goodsinfo/:id',component:goodsInfo,name:'goodsinfo'}
     ],
     linkActiveClass:'mui-active'//替换路由激活时默认的类
 })

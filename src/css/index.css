@@ -1,3 +1,4 @@
 body{
     background:#fff;
 }
+* { touch-action: pan-y }
