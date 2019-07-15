@@ -67,6 +67,7 @@ module.exports={
             {test:/\.css$/, use: ['style-loader','css-loader']},
             //配置处理less文件的匹配规则和loader使用规则
             {test:/\.less$/, use: ['style-loader','css-loader','less-loader']},
+            // {test:/\.scss$/, use: ['style-loader','css-loader','sass-loader']},
             //配置处理图片路径，文件的loader和使用规则   url地址处理loader
             //后面加?表示要传参了  规则和在url地址中传参一样 键值对 例如 id=10
             //limit 表示限制大小为n个字节 ，文件大小大于这个字节，就不会把文件进行base64的转换；小于等于就会进行转换

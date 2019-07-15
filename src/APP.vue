@@ -1,7 +1,7 @@
 <template>
     <div class="app-container">
         <!--顶部Header区域-->
-        <mt-header fixed title="草帽商城">
+        <mt-header fixed title="海贼王">
         </mt-header>
         <!--底部Tabbar区域-->
         <!--路由显示区域-->
@@ -41,6 +41,7 @@
 <style scoped>
   .app-container{
       padding-top:40px;
+      padding-bottom:30px;
       overflow: hidden;
   }
     .v-enter
