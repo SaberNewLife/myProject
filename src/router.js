@@ -29,5 +29,24 @@ var router=new VueRouter({
     ],
     linkActiveClass:'mui-active'//替换路由激活时默认的类
 })
+//3.3 这是新增的路由守卫知识   分为全局守卫、单个路由守卫、组件内路由守卫
+//3.3.1 定义一个全局守卫   首先是进入路由之前进行判断
+router.beforeEach((to,from,next)=>{
+
+
+//    无论怎样 ，最后一定要执行next()函数
+    next()
+})
+//3.3.2 全局解析守卫 在beforeRouteEnter调用之后调用
+router.beforeResolve((to,from,next)=>{
+
+  console.log("进入路由之前？？？")
+
+    next()
+})
+//3.3.3 全局后置守卫 进入路由之后 后置守卫因为后面不需要进行操作了，就不用传入next函数了
+router.afterEach((to,from)=>{
+   console.log("afterEach后置钩子函数")
+})
 //4,将路由对象暴露出去
 export default router

@@ -1,7 +1,7 @@
 <template>
     <div class="app-container">
         <!--顶部Header区域-->
-        <mt-header fixed title="海贼王">
+        <mt-header fixed title="路飞商城">
         </mt-header>
         <!--底部Tabbar区域-->
         <!--路由显示区域-->

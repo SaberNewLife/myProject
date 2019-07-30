@@ -4,7 +4,7 @@
   "main": "webpack.config.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "webpack-dev-server --open --port 3200 --contentBase src --hot --host 192.168.1.103"
+    "start": "webpack-dev-server --open --port 3200 --contentBase src --hot"
   },
   "keywords": [],
   "author": "",
